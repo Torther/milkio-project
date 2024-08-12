@@ -1,0 +1,36 @@
+{
+	"name": "milkio-project",
+	"type": "module",
+	"private": true,
+	"module": "index.ts",
+	"scripts": {
+		"start": "bun run ./run-serve.ts",
+		"dev": "bun run --inspect ./run-serve.ts",
+		"api-test": "bun run ./run-api-test.ts",
+		"command": "bun run ./run-command.ts",
+		"build": "bun build ./run-serve.ts --sourcemap=external --outdir=./dist --target=bun --splitting --minify",
+		"milkio": "bun run ./node_modules/milkio/c.ts"
+	},
+	"trustedDependencies": [],
+	"dependencies": {
+		"@types/bcryptjs": "^2.4.6",
+		"@types/jsonwebtoken": "^9.0.6",
+		"bcrypt": "^5.1.1",
+		"biome": "^0.3.3",
+		"client": "./packages/client",
+		"drizzle-kit": "^0.24.0",
+		"drizzle-orm": "^0.33.0",
+		"jsonwebtoken": "^9.0.2",
+		"milkio": "^0.8.2",
+		"milkio-drizzle": "^0.1.6",
+		"milkio-template": "^0.0.2",
+		"mysql2": "^3.11.0",
+		"typia": "^6.7.2"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.8.0",
+		"@types/bcrypt": "^5.0.2",
+		"@types/bun": "latest",
+		"typescript": "5.5.4"
+	}
+}

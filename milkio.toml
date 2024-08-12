@@ -1,0 +1,13 @@
+[menubar]
+commands = [
+  { name = 'Drizzle Kit', script = 'bun run ./drizzle.migrate.push.ts' },
+  { name = 'Drizzle Studio', script = 'bun x drizzle-kit studio --port 3000' },
+]
+
+[generate]
+significant = ['./node_modules/milkio-drizzle/g.ts']
+insignificant = []
+
+[exists.milkio-drizzle]
+path = '/generated/database-schema.ts'
+content = ''
